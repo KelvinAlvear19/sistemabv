@@ -1,0 +1,6 @@
+.container{
+    padding: 20px;
+    background-color:blue;
+    height: calc(100vh  - 144px);
+
+}
