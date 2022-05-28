@@ -12,7 +12,7 @@ const routes: Routes = [
 {path:"estadisticas",loadChildren:()=>import('./estadisticas/estadisticas.module').then((m)=>m.EstadisticasModule)},
 {path:"libros",loadChildren:()=>import('./libros/libros.module').then((m)=>m.LibrosModule)},
 {path:"reseñas",loadChildren:()=>import('./reseñas/reseñas.module').then((m)=>m.ReseñasModule)},
-{path:"usuarios",loadChildren:()=>import('./libros/libros.module').then((m)=>m.LibrosModule)}
+{path:"usuarios",loadChildren:()=>import('./usuarios/usuarios.module').then((m)=>m.UsuariosModule)}
 ];
 
 @NgModule({

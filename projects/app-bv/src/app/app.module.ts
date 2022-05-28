@@ -4,7 +4,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from "./core/core.module";
-
+import {ChartModule} from 'primeng/chart';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { CoreModule } from "./core/core.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    ChartModule
     
   ],
   providers: [],

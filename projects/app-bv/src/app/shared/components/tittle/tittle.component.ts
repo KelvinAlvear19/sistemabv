@@ -9,6 +9,7 @@ import { IMenu, MenuService } from '../../../services/menu.service';
 })
 export class TittleComponent implements OnInit {
   path:IMenu
+  pageActual: number=1;
   constructor(
     private menuService:MenuService,
     private activateRoute:ActivatedRoute

@@ -8,6 +8,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { RouterModule } from '@angular/router';
+import {ChartModule} from 'primeng/chart';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     FlexLayoutModule,
-    RouterModule
+    RouterModule,
+    ChartModule
   ],
   exports: [
     PageLoginComponent,

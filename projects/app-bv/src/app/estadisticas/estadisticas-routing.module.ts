@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageListComponent } from './pages/page-list/page-list.component';
 
 const routes: Routes = [
-  {path:'home',component:PageListComponent}
+  {path:'',component:PageListComponent}
 ];
 
 @NgModule({
