@@ -4,7 +4,6 @@ import { ContainerComponent } from './components/container/container.component';
 import { TittleComponent } from './components/tittle/tittle.component';
 import { TableComponent } from './components/table/table.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import swal from 'sweetalert';
 
 @NgModule({
   declarations: [
