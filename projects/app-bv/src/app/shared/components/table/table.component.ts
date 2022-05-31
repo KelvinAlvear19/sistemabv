@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 interface IData{
   id:number;
   agency:string;
@@ -11,7 +11,10 @@ interface IData{
 })
 export class TableComponent implements OnInit {
   @Input() dataAgency:any
-  @Input() columns!:string[]
+  @Input() columns!:any[]
+
+  @Output() onDelete: EventEmitter<any> = new EventEmitter(); 
+
   objectKeys = Object.keys;
   pageActual: number=1;
   Alert:boolean=false;
@@ -22,12 +25,7 @@ export class TableComponent implements OnInit {
   }
 
   deleteRow(rowId:number): void{
-    if (confirm('Estas seguro de borrar?')) {
-      var i = this.dataAgency.map((x: { id: any; })=>{
-         x.id;
-      }).indexOf(rowId);
-      this.dataAgency.splice(i,1);
-    }
+    this.onDelete.emit(rowId); 
   }
 
 }

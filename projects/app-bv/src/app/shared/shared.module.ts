@@ -4,6 +4,7 @@ import { ContainerComponent } from './components/container/container.component';
 import { TittleComponent } from './components/tittle/tittle.component';
 import { TableComponent } from './components/table/table.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     TittleComponent,
     ContainerComponent,
     TableComponent,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule,
   ]
 })
 export class SharedModule { }

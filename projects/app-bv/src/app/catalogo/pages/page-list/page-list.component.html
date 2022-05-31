@@ -1,4 +1,12 @@
 <bv-tittle></bv-tittle>
 <bv-container>
-    <bv-table [dataAgency]="dataCatalogo" [columns]="listFields"></bv-table>
+  <bv-table
+    [dataAgency]="dataCatalogo"
+    [columns]="columns"
+    (onDelete)="deleteCategoria($event)"
+  ></bv-table>
+  <input [(ngModel)]="categoria" name="categoria" />
+  <input [(ngModel)]="descripcion" name="descripcion" />
+  <button (click)="onSubmit()">Guardar</button>
 </bv-container>
+

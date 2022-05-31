@@ -5,8 +5,8 @@
     <table class="table table-striped table-bordered" >
         <thead>
             <tr>
-                <th scope="col" *ngFor="let titulo of columns">
-                    {{titulo}}
+                <th scope="col" *ngFor="let columna of columns">
+                    {{columna.title}}
                     
                 </th>
                 <th></th>
@@ -16,8 +16,8 @@
         </thead>
         <tbody>
             <tr *ngFor="let fila of dataAgency | paginate: {itemsPerPage:7 ,currentPage: pageActual}">
-                <td *ngFor="let key of objectKeys(fila)">
-                    {{fila[key]}}
+                <td *ngFor="let columna of columns">
+                    {{fila[columna.field]}}
                 </td>
                 <td>
                     <button class="btn btn-primary">
@@ -25,7 +25,7 @@
                     
                 </td>
                 <td>
-                    <button class="btn btn-danger" (click)="deleteRow(fila['Id'])">
+                    <button class="btn btn-danger" (click)="deleteRow(fila['_id'])">
                         <span class='bi bi-trash'></span></button>
                 </td>
             </tr>
